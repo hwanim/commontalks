@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/toolbarTitleTextView"
+                android:text="일상의 대화"
+                android:layout_gravity="center"
+                android:fontFamily="@font/stonbrand"
+                />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right"
+                app:srcCompat="@drawable/ic_more_btn"
+                android:layout_marginRight="7dp"
+                android:id="@+id/settingActivityBtn"
+                />
+
+
+
+        </FrameLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        />
+
+    <com.roughike.bottombar.BottomBar
+        android:background="@drawable/chatroombottomborder"
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:bb_activeTabColor="#3e87ff"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

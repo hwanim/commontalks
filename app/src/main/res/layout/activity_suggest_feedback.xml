@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ludus.commontalks.views.SuggestFeedbackActivity"
+    android:id="@+id/suggestFeedbackConstraintLayout"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_main_logo_smile_grey"
+                android:id="@+id/suggestFeedbackLogoImage"
+                />
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="불편한 점이나 건의할\n 내용이 있으신가요?"
+                android:id="@+id/suggestFeedback"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/suggestFeedbackLogoImage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="#707070"
+                />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/suggestFeedbackEt1"
+                android:layout_height="268dp"
+                android:background="@drawable/border_write_post"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="11dp"
+                app:layout_constraintTop_toBottomOf="@+id/suggestFeedback"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:gravity="top"
+                android:hint="건의사항 혹은 개선점을 적어서 보내 주세요. 저희 앱에 적극적으로 반영하겠습니다."
+                android:textColorHint="@color/popupContentsTitle"
+                android:textSize="20sp"
+                android:maxLines="10"
+                android:cursorVisible="false"
+                />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="28dp"
+                android:background="@color/designBarColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/suggestFeedbackEt1"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="20dp"
+                />
+
+
+            <ImageView
+                android:layout_width="184dp"
+                android:layout_height="40dp"
+                android:id="@+id/suggestSendBtn"
+                android:src="@drawable/ic_btn_send_feedback"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/suggestFeedbackEt1"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="70dp"
+                />
+
+
+            <LinearLayout
+                android:background="@drawable/border_write_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/suggestFeedbackEt1"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="일상의 대화 contact"
+                    android:textSize="16sp"
+                    android:layout_marginTop="7dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="이메일 : commontalks.cs@gmail.com"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="페이스북 : 일상의 대화"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="13dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

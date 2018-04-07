@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.ludus.commontalks.views.SettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/toolbarTitleTextView"
+                android:text="설정"
+                android:layout_gravity="center"
+                android:fontFamily="@font/stonbrand"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="7dp"
+                android:id="@+id/settingActivityBtn"
+                />
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:orientation="vertical"
+            android:id="@+id/settingContentsLayout"
+            >
+            
+            <ImageView
+                android:layout_width="77dp"
+                android:id="@+id/settingProfilePhoto"
+                android:layout_height="77dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="22.5dp"
+                android:src="@drawable/ic_menu_gallery"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:textSize="22sp"
+                    android:id="@+id/settingNickName"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    app:srcCompat="@drawable/ic_edit_img"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/settingRatingInfoLayout"
+
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_like_actv"
+                    android:id="@+id/settingRatingLikeImage"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/settingRatingInfo"
+                    android:textSize="10sp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="40dp"
+                >
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@color/designBarColor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="알림 설정"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    />
+
+
+                <Switch
+                    android:id="@+id/notificationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/notiDetailSettingLayout"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="19dp"
+                        android:layout_marginLeft="60dp"
+                        android:background="@color/designBarColor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:text="새 채팅"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        />
+                    <Switch
+                        android:id="@+id/newChatNotiSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="19dp"
+                        android:layout_marginLeft="60dp"
+                        android:background="@color/designBarColor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:text="새 메세지"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        />
+                    <Switch
+                        android:id="@+id/newMsgNotiSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="19dp"
+                        android:layout_marginLeft="60dp"
+                        android:background="@color/designBarColor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:text="나의 대화 칭찬"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        />
+                    <Switch
+                        android:id="@+id/newCompliNotiSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@color/designBarColor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="이용약관 확인"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="40dp"
+                    android:id="@+id/get_contracts"
+                    android:src="@drawable/ic_next_btn_blue_tone"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="42dp"
+                    android:background="@color/designBarColor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="일상의 대화 개선점 건의하기"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/ic_next_btn_blue_tone"
+                    android:id="@+id/suggestFeedbackBtn"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coinsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/haveCoins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25"
+                        android:textStyle="bold"
+                        android:textColor="@color/popupContentsTitle"
+                        android:textSize="50sp" />
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:id="@+id/postUserProfilePhoto"
+                        android:src="@drawable/ic_main_logo_big"
+                        android:layout_marginLeft="-10dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현재 보유 숨"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="127dp"
+                    android:layout_height="31dp"
+                    android:id="@+id/goToShopBtn"
+                    android:src="@drawable/ic_btn_go_to_coin_shop"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

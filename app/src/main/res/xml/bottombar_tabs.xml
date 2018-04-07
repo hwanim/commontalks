@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tabs>
+        <tab
+            id="@+id/tab_write"
+            icon="@drawable/ic_write_post_grey"
+            title="Write" />
+        <tab
+            id="@+id/tab_feed"
+            icon="@drawable/ic_feed_icon_grey"
+            title="Feed" />
+        <tab
+            id="@+id/tab_chat"
+            icon="@drawable/ic_chat_icon_grey"
+            title="Chat" />
+    </tabs>
+
+</PreferenceScreen>
+

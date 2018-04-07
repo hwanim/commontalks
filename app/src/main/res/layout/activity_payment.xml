@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ludus.commontalks.views.PaymentActivity"
+    android:background="#ffffff"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/toolbarTitleTextView"
+                android:text="숨 상점"
+                android:layout_gravity="center"
+
+                />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/coinsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/haveCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/popupContentsTitle"
+                android:textSize="50sp" />
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:id="@+id/postUserProfilePhoto"
+                android:src="@drawable/ic_main_logo_big"
+                android:layout_marginLeft="-10dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 보유 숨"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#b8b8b8"
+        app:layout_constraintBottom_toTopOf="@id/coinItemsLayout"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#b8b8b8"
+        app:layout_constraintTop_toBottomOf="@id/coinItemsLayout"
+        android:id="@+id/coinsLayoutBottomLine"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coinsLayout"
+        android:orientation="vertical"
+        android:id="@+id/coinItemsLayout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase1"
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="17 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩1.0"
+                android:textSize="16sp"
+                />
+
+            </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b8b8b8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase2"
+
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="34(+1) 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩2.0"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b8b8b8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase3"
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="51(+2) 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩3.0"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b8b8b8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase4"
+
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="170(+17) 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩10.0"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b8b8b8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase5"
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="340(+68) 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩20.0"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#b8b8b8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/purchase6"
+            >
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="42dp"
+                android:background="@color/designBarColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="510(+127) 숨"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:text="₩30.0"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="238dp"
+        android:layout_height="42dp"
+        android:id="@+id/showAds"
+        android:src="@drawable/ic_show_ads_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coinsLayoutBottomLine"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showAds"
+        android:layout_marginTop="3dp"
+        android:text="@string/seeAdInForm"
+        />
+
+</android.support.constraint.ConstraintLayout>

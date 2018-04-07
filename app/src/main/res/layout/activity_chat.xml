@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ludus.commontalks.views.ChatActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/chatActivityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_backward"
+                android:id="@+id/chatActivityBackButton"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="일상의 대화"
+                android:layout_gravity="left"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/chatActivityTitleView"
+                />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/settingButton"
+                android:layout_gravity="right"
+                android:src="@drawable/bell_big"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!--<ProgressBar-->
+        <!--style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:max="100"-->
+        <!--android:progress="25"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/chatActivityToolbar"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent" />-->
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="48dp"
+            android:background="#FFFFFF"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/chatLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/chatroombottomborder"
+        >
+
+
+        <ImageView
+            android:id="@+id/useItemBtn"
+            android:layout_gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/ic_timer_grey"
+            android:background="#8FFF"
+            />
+        
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp"
+            android:background="@color/designBarColor"
+            />
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_weight="8"
+            android:background="#8FFF"
+            android:layout_width="0dp"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:hint="채팅을 입력하세요."
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/senderBtn"
+            android:layout_width="48dp"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:clickable="true"
+            android:layout_height="48dp"
+            android:background="#8FFF"
+            android:src="@drawable/ic_sender_btn"
+            />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

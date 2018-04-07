@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    >
+    
+    <!--아이템사용시 시스템 출력-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#ffffff"
+        android:id="@+id/systemChatFrameLayout"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="342dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#b8b8b8"
+            />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:id="@+id/chatMsgSystemTimer"
+                app:srcCompat="@drawable/ic_timer"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="~~님이 ~~를 사용하셨습니다."
+                android:textSize="14sp"
+                android:id="@+id/chatMsgSystemTxt"
+                android:layout_gravity="center"
+                android:textColor="#909090"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:02PM"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/chatMsgSystemTime"
+            android:textSize="12sp"
+            android:textColor="#bbbbbb"
+            />
+        
+    </FrameLayout>
+
+
+    <!--채팅 시작하는 메세지-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:id="@+id/chatRoomStartMsg"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/chatRoomInitOppositeUserProfilePhoto"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/chatRoomInitOppositeUserNickName"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#b8b8b8"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:id="@+id/initOppositeUserNickName"
+                    android:text="thur.ryun.82"
+                    android:background="#ffffff"
+                    android:paddingLeft="17.5dp"
+                    android:paddingRight="17.5dp"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="님과의 대화방입니다. \n 먼저 인사를 건네보세요"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/initChatMsg"
+                />
+
+            <!--상대방이 포스트유저일떄-->
+            <LinearLayout
+                android:id="@+id/initOppositeUserChatItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="9dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/InitOppositeUserProfilePhoto"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/InitOppositeUserLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="7dp"
+
+                    >
+
+                    <ImageView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="2dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/designBarColor"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="313dp"
+                            android:id="@+id/InitOppositeUserChatTxt"
+                            android:textSize="14dp"
+                            android:textColor="@color/chatContentsMain"
+                            />
+                        <TextView
+                            android:id="@+id/InitOppositeUserChatTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="12:30 PM"
+                            android:textColor="@color/chatContentsSub"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--내가 포스트유저일때-->
+            <LinearLayout
+                android:id="@+id/initUserChatItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:id="@+id/initUserChatContentsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="7dp"
+                    android:gravity="right"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/initUserChatTxtLayout"
+                        android:layout_marginRight="9dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="313dp"
+                            android:id="@+id/initUserChatTxt"
+                            android:textSize="14dp"
+                            android:gravity="right"
+                            android:textColor="@color/chatContentsMain"
+                            />
+                        <TextView
+                            android:id="@+id/initUserChatTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="12:30 PM"
+                            android:textColor="@color/chatContentsSub"
+                            android:layout_gravity="right"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="2dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/initUserDesignLine"
+                        android:background="@color/designBarColor"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--상대방 채팅-->
+    <LinearLayout
+        android:id="@+id/oppositeUserChatItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/oppositeUserDateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="- 12월 23일 -"
+            android:textSize="14dp"
+            android:visibility="gone"
+            />
+        
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="9dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/oppositeUserPrfilePhoto"
+            />
+        
+        <LinearLayout
+            android:id="@+id/oppositeUserChatContentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+
+            >
+            
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:layout_width="2dp"
+                android:layout_marginLeft="13dp"
+                android:layout_height="match_parent"
+                android:id="@+id/oppositeUserDesignLine"
+                android:background="@color/designBarColor"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/oppositeUserChatTxtLayout"
+                android:layout_marginLeft="9dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="313dp"
+                    android:id="@+id/oppositeUserChatTxt"
+                    android:textSize="14dp"
+                    android:textColor="@color/chatContentsMain"
+                    />
+                <TextView
+                    android:id="@+id/oppositeUserChatTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/chatContentsSub"
+
+                    />
+
+
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--내 채팅-->
+    <LinearLayout
+        android:id="@+id/userChatItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/userDateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="- 12월 23일 -"
+            android:textSize="14dp"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/userChatContentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:gravity="right"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userChatTxtLayout"
+                android:layout_marginRight="9dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="313dp"
+                    android:id="@+id/userChatTxt"
+                    android:textSize="14dp"
+                    android:gravity="right"
+                    android:textColor="@color/chatContentsMain"
+                    />
+                <TextView
+                    android:id="@+id/userChatTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="12:30 PM"
+                    android:textColor="@color/chatContentsSub"
+                    android:layout_gravity="right"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="3dp"
+                android:layout_width="2dp"
+                android:layout_marginRight="13dp"
+                android:layout_height="match_parent"
+                android:id="@+id/userDesignLine"
+                android:background="@color/designBarColor"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 방 나갈을-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#ffffff"
+        android:id="@+id/exitFrameLayout"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="342dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#b8b8b8"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대화가 끝났습니다."
+                android:textSize="14sp"
+                android:id="@+id/exitTextView"
+                android:layout_gravity="center"
+                android:textColor="#909090"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:02PM"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/exitTime"
+            android:textSize="12sp"
+            android:textColor="#bbbbbb"
+            />
+    </FrameLayout>
+</LinearLayout>

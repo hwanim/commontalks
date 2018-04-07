@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:id="@+id/itemConstLayout"
+    >
+
+    <!--대화중인 채팅방일때 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/activeChatRoomLayout"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal"
+            android:id="@+id/activeChatRoom"
+            >
+
+            <ImageView
+                android:id="@+id/chatRoomProfilePhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                />
+
+            <LinearLayout
+                android:layout_width="239dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/oppsiteUserNickName"
+                    android:layout_width="200dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/chatRoomProfilePhoto"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="\@daldal"
+                    android:textSize="16sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/recentChat"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:text="recent Message Here"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/designBarColor"
+                    android:id="@+id/chatRoomMessageComeNoti"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sendTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="4dp"
+                android:textSize="14sp"
+                android:text="1시간 59분"
+                android:gravity="center_vertical|left"
+                />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:progress="100"
+            android:max="100"
+            android:id="@+id/chatRoomProgressBar"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
+
+
+    <!--평가하기 전 레이아웃-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/disabledFrameLayout"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/disabled_chat_background"
+            android:scaleType="centerCrop"
+            android:id="@+id/disabledChatBackgroundImageView"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/disabledChatRoomLayout"
+            android:orientation="horizontal"
+            android:background="#f2fbff"
+            >
+
+            <ImageView
+                android:id="@+id/disabledChatRoomPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:id="@+id/disabledChatOppositeUserNickname"
+                android:text="IveLee"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluateText"
+                android:layout_marginLeft="3dp"
+                android:text="님과의 대화 끝"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/likeBtnConstLayout"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_like_blank"
+                    android:id="@+id/ic_like"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/ratingDesignBar"
+                    android:layout_marginRight="12dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_rectangle_round_border"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/ratingDesignBar"
+                    android:layout_marginRight="9dp"
+                    />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

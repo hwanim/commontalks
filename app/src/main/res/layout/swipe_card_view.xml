@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="360dp"
+    android:layout_height="550dp"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:id="@+id/userProfilePhoto"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textSize="18sp"
+                        android:layout_marginTop="14dp"
+                        android:id="@+id/userNickname"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/cardViewRatingLayout"
+                        >
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            app:srcCompat="@drawable/ic_like_actv"
+                            android:id="@+id/cardViewRatingImageView"
+                            android:visibility="gone"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:textSize="10sp"
+                            android:id="@+id/cardViewRatingInfo"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/bell_big"
+        android:id="@+id/reportFeedUser"
+
+        />
+    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_post_no_photo"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="12dp"
+            >
+            
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@color/designBarColor"
+
+
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/textLinearLayout"
+                >
+                <TextView
+                    android:id="@+id/nameAgeTxt"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/feedContentsTxtMain"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:maxLines="6"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/locationNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/feedContentsTxtSub"
+                        android:textSize="12sp"
+                        android:textStyle="normal"/>
+
+                    <TextView
+                        android:id="@+id/chatLimitValueDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#38c2ff"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

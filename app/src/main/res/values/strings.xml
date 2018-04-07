@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">일상의대화</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="message_get_channel">msg_get_channel</string>
+    <string name="message_get_channel_desc">messagecomesfromother</string>
+    <string name="tutorialtext1">초간단 조작법\n설명 시작하기</string>
+    <string name="start"><u>시작하기</u></string>
+    <string name="navDialog1">지금 이 순간의 다른 사람들은 어떨까?\n 다른 사람들의 \'지금\' 둘러보기는 여기!</string>
+    <string name="navDialogTitle1">\'지금\'둘러보기</string>
+
+
+    <string name="navDialog2">나는 지금 어떨까?\n다른 사람들과 나의 \'지금\'\n공유하기는 여기!</string>
+    <string name="navDialogTitle2">나의 \'지금\' 공유하기</string>
+
+    <string name="navDialog3">대화방 보기</string>
+    <string name="navDialogTitle3">현재 나와 대화 중인 사람\n모아보기는 여기!</string>
+
+    <string name="firstSwipeLayoutTitleLeft">이 \'지금\'을 넘기시겠어요?</string>
+    <string name="firstSwipeLayoutTitleRight">상대방과 대화를 할 수 있어요!</string>
+
+    <string name="firstSwipeLayoutContentLeft">한 번 지나간 \'지금\'은\n다시 볼 수 없어요.</string>
+    <string name="firstSwipeLayoutContentRight">마지막 메세지로부터 10분동안 대\n화가 없으면 채팅방이 자동으로 사\n라집니다!</string>
+
+
+    <string name="next"><u>다음</u></string>
+    <string name="back">뒤로</string>
+    <string name="swipeLeft">왼쪽으로\n스와이프</string>
+    <string name="swipeLeftContent">통과하고 다른 사람의\n\'지금\' 더보기</string>
+
+    <string name="swipeRight">오른쪽으로\n스와이프</string>
+    <string name="swipeRightContent">이 \'지금\'을 쓴 사람과\n대화하기</string>
+    <string name="swipe">넘기기</string>
+    <string name="cancel">취소</string>
+    <string name="startTalk">대화 시작</string>
+    <string name="skipTuto"><u><![CDATA[설명 건너뛰기 >]]></u></string>
+    <string name="goUpdate"><u>업데이트 하기</u></string>
+    <string name="quit"><u>나가기</u></string>
+    <string name="seeAdInForm">*3숨이 지급됩니다.</string>
+    <string name="confirm"><u>확인</u></string>
+    <string name="moreChat"><u>대화 더 보내기</u></string>
+    <string name="useTimeSpend"><u>시간연장 사용해보기</u></string>
+    <string name="updateLater"><u>나중에</u></string>
+
+</resources>

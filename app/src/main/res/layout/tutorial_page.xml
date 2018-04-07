@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/signInPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="생년월일과 성별"
+            android:fontFamily="@font/stonbrand"
+            android:textSize="38sp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/signInPageDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:paddingLeft="58dp"
+            android:paddingRight="58dp"
+            android:fontFamily="@font/stonbrand"
+            android:text="주민등록번호 앞 6자리와 뒷 1자리를 입력해주세요."
+            android:textAlignment="center"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/birthAndSexLayout"
+                android:gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:id="@+id/et1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Y"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et2"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/et2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Y"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et3"
+                        />
+
+                    <EditText
+                        android:id="@+id/et3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et4"
+                        />
+
+                    <EditText
+                        android:id="@+id/et4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et5"
+                        />
+
+                    <EditText
+                        android:id="@+id/et5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="D"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et6"
+                        />
+
+                    <EditText
+                        android:id="@+id/et6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="D"
+                        android:textColorHint="@color/signInHintColor"
+                        android:textSize="22sp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        android:nextFocusDown="@id/et7"
+                        />
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="20sp"
+                    />
+
+
+                    <EditText
+                        android:id="@+id/et7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:inputType="textPassword"
+                        android:maxLength="1"
+                        android:backgroundTint="#63e0ff"
+                        />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_edit_img"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나이와 성별 정보는 타 회원에게 노출되지 않습니다."
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/stonbrand"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:id="@+id/profileInitSetLayout"
+                android:visibility="gone"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                >
+
+
+
+                <ImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/profilePreview"
+                    app:srcCompat="@drawable/ic_ic_sign_up_profile_photo"
+                    />
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    app:srcCompat="@drawable/ic_photo_edit_big"
+                    />
+
+            </FrameLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/nickNameSetLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:backgroundTint="#63e0ff"
+                    android:id="@+id/nicknameEt"
+                    android:maxLength="15"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_edit_img"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/welcomeRegisterLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:backgroundTint="#63e0ff"
+                    android:id="@+id/nicknameDisplay"
+                    android:enabled="false"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

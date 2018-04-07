@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!--채팅 시작하기-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="44dp"
+        android:id="@+id/popupLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/popupChatLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:textStyle="bold"
+                android:textColor="@color/popupContentsTitle"
+                android:textSize="40dp" />
+            
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:id="@+id/postUserProfilePhoto"
+                android:src="@drawable/ic_menu_gallery"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/postUserNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="thur.ryun.72"
+            android:textColor="@color/popupContentsUsername"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/popupContentsTitle"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아니요"
+                android:layout_marginRight="22dp"
+                android:textSize="18sp"
+                android:id="@+id/popupNoButton"
+                android:textColor="@color/popupContentsButton"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/popupYesButton"
+                android:text="예"
+                android:layout_marginLeft="22dp"
+                android:textSize="18sp"
+                android:textColor="@color/btnAcceptColor"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--신고하기-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="44dp"
+        android:id="@+id/reportUserPopupLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center"
+            >
+
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:id="@+id/reportUserPopupProfilePhoto"
+                android:src="@drawable/ic_menu_gallery"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reportUserPopupNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="thur.ryun.72"
+            android:textColor="@color/popupContentsUsername"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="이 게시물을 신고하시겠습니까? \n 신고된 게시물은 피드에서 삭제되며, 검토 후 해당 유저는 제재조치됩니다."
+            android:gravity="center"
+            android:textColor="@color/popupContentsTitle"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아니요"
+                android:layout_marginRight="22dp"
+                android:textSize="18sp"
+                android:id="@+id/reportUserNoBtn"
+                android:textColor="@color/popupContentsButton"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reportUserYesBtn"
+                android:text="신고하기"
+                android:layout_marginLeft="22dp"
+                android:textSize="18sp"
+                android:textColor="@color/btnAcceptColor"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--아이템사용하기-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:id="@+id/useItemLayout"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                >
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:id="@+id/itemUserOpppositeUserPhoto"
+                    android:src="@drawable/ic_menu_gallery"
+                    />
+                
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_timer"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    />
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="19dp"
+                android:id="@+id/itemUserOppositeUserNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="thur.ryun.72"
+                android:textColor="@color/popupContentsUsername"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/itemUserUserTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/popupContentsTitle"
+                android:text="이 대화방에 타이머 설정 \n 타이머 종류를 선택해주세요. \n \n타이머 설정시 해당 시간만큼 대화방이 유지됩니다."
+                android:textSize="13sp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/item1Layout"
+            android:layout_marginTop="34dp"
+            >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/ic_timer_2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="1시간"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginRight="22dp"
+                android:hint="14숨"
+                android:textColor="#9d9d9d"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/item2Layout"
+            >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/ic_timer_3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="2시간"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginRight="22dp"
+                android:hint="22숨"
+                android:textColor="#9d9d9d"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/item3Layout"
+            >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/ic_timer_4"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="4시간"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginRight="22dp"
+                android:hint="46숨"
+                android:textColor="#9d9d9d"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/item4Layout"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/ic_timer_5"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="꿀잠자기(~낮 12시)"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginRight="22dp"
+                android:hint="60숨"
+                android:textColor="#9d9d9d"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--아이템 구매하기-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="44dp"
+        android:id="@+id/buyItemLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                >
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:id="@+id/buyItemOpppositeUserPhoto"
+                    />
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_timer"
+                    android:id="@+id/buyItemTimer"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    />
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="19dp"
+                android:id="@+id/buyItemOpppositeUserNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="thur.ryun.72"
+                android:textColor="@color/popupContentsUsername"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/buyItemTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/popupContentsTitle"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아니요"
+                android:layout_marginRight="22dp"
+                android:textSize="18sp"
+                android:id="@+id/buyNoBtn"
+                android:textColor="@color/popupContentsButton"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buyYesBtn"
+                android:text="구매하기"
+                android:layout_marginLeft="22dp"
+                android:textSize="18sp"
+                android:textColor="@color/btnAcceptColor"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--베타환영-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:id="@+id/betaDialogLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center"
+            >
+
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:id="@+id/betaDialogPhoto"
+                android:src="@drawable/ic_splash_img"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/betaDialogContentsTxt"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/popupContentsTitle"
+            android:lineSpacingExtra = "6dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/betaDialogTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="일상의 대화 개발팀 드림"
+            android:layout_marginTop="23dp"
+            android:textColor="@color/popupContentsUsername"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/betaDialogBtn"
+                android:text="확인"
+                android:textSize="18sp"
+                android:textColor="@color/btnAcceptColor"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--버전체크-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:id="@+id/versionUpdateDialogLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center"
+            >
+
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@drawable/ic_splash_img"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/versionUpdateTxt"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/popupContentsTitle"
+            android:lineSpacingExtra = "6dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="일상의 대화 개발팀 드림"
+            android:layout_marginTop="23dp"
+            android:textColor="@color/popupContentsUsername"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/versionUpdateNoBtn"
+                android:text="@string/updateLater"
+                android:textSize="18sp"
+                android:textColor="#b6b6b6"
+                android:layout_marginRight="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/versionUpdateYesBtn"
+                android:text="@string/goUpdate"
+                android:textSize="18sp"
+                android:textColor="@color/btnAcceptColor"
+                />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--채팅방제한기능 설명 다이얼로그-->
+    <LinearLayout
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:orientation="vertical"
+        android:id="@+id/chatLimitDescribeLayout"
+        android:visibility="gone"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_chat_limit_guide"
+            android:background="@drawable/round_background"
+            />
+
+        <TextView
+            android:layout_marginTop="31.5dp"
+            android:layout_marginBottom="19dp"
+            android:layout_marginRight="54.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/chatLimitDescribeYesBtn"
+            android:text="확인"
+            android:layout_marginLeft="22dp"
+            android:textSize="18sp"
+            android:textColor="@color/btnAcceptColor"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
